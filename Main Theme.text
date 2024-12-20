@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Slider and Vertical Grid Clickable Buttons</title>
+    <style>
+        /* Styling for the banner slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Adjust width as needed */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Navigation buttons for the slider */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Styling for clickable buttons with images in grid view */
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1000fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #999;
+            border-radius: 10px;
+            padding: 9px;
+            background-color: white;
+            transition: background-color 0.03s;
+            text-align: center;
+        }
+
+        .link-button:hover {
+            background-color: #ffdbbf;
+        }
+
+        .link-button img {
+            border-radius: 5px;
+            height: 50px; /* Adjust size as needed */
+            width: 50px;  /* Adjust size as needed */
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        .link-button span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner slider container -->
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide" onclick="window.location.href='go:tsports'" style="background-image: url('https://image.tsports.com/images/mobile_logo/1719672720-LIVE.jpg');"></div>
+            <div class="slide" onclick="window.location.href='go:jamuna'" style="background-image: url('https://i.ibb.co/bHdtcgD/image.png');"></div>
+            <div class="slide" onclick="window.location.href='go:kids1'" style="background-image: url('https://i.ibb.co/n0GPXfz/image.png');"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+	
+	
+	
+	
+	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        /* Styling for marquee */
+        .marquee {
+            width: 100%;
+            background-color: #333333;
+            color: white;
+            padding: 0px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .marquee span {
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Marquee for notifications -->
+    <div class="marquee">
+        <span><i class="fa fa-bell" style="font-size:24px" aria-hidden="true"></i></span>
+        <marquee scrollamount="4" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            ''আসসালামু আলাইকুম" 📝কোনো চ্যানেল Play (প্লে) না হলে আমাদের সাপোর্ট এ জানান ❗ 🗨️আমাদের সাথে থাকার জন্য ধন্যবাদ❤️
+        </marquee>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+    <!-- Container for clickable buttons in vertical grid view -->
+    <div class="button-container">
+ 	
+	
+        <a href="go:jamuna" class="link-button">
+            <img src="https://i.ibb.co/hBgYZhC/20240815-181411.png" alt="Jamuna Image">
+            <span>Jamuna</span>
+        </a>
+        <a href="go:deepto" class="link-button">
+            <img src="https://i.ibb.co/n6c0xPh/20240817-133826.png" alt="Deepto Tv">
+            <span>Deepto Tv</span>
+        </a>
+        <a href="go:sony2" class="link-button">
+            <img src="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen2_SD_Logo_CLR.png" alt="Sony Sports2">
+            <span>Sony Sports2</span>
+        </a>
+        <a href="go:channel24" class="link-button">
+            <img src="https://i.ibb.co/xHNpDpp/20240815-181423.png" alt="Channel 24">
+            <span>Channel 24</span>
+        </a>
+        <a href="go:moviebd" class="link-button">
+            <img src="https://moviebangla.tv/wp-content/uploads/2024/06/moviebanglatv-logo-2.png" alt="Movie Bangla">
+            <span>Movie Bangla</span>   
+        </a>
+		       <a href="go:maasranga" class="link-button">
+            <img src="https://i.ibb.co/rkmsTgZ/20240817-133855.png" alt="Maasranga">
+            <span>Maasranga</span>
+        </a>
+        <a href="go:discoveryb" class="link-button">
+            <img src="https://i.ibb.co/4pQkwcX/20240815-205052.png" alt="Discovery">
+            <span>Discovery</span>
+        </a>
+        <a href="go:starj1" class="link-button">
+            <img src="https://i.ibb.co/VBKhBmy/20240815-181253.png" alt="Star Jalsha">
+            <span>Star Jalsha</span>
+        </a>
+      
+	  
+	  
+	  
+	  
+        <a href="go:ottbangla" class="link-button">
+            <img src="https://cdn.bio.link/uploads/profile_pictures/2023-10-10/LzMbans1Arpg1xOvxdK8P6TbMnWI5SAF.png" alt="Ott Bangla">
+            <span>Ott Bangla</span>
+        </a>
+		
+		
+		
+	  
+        <a href="go:zeeb" class="link-button">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/0/03/Zee_Bangla_HD_2017_Logo.jpg" alt="zee bangla">
+            <span>zee bangla</span>
+        </a>
+	  
+        <a href="go:zeebc" class="link-button">
+            <img src="https://tvschedule.today/_next/image?url=https%3A%2F%2Fimagesdishtvd2h.whatsonindia.com%2Fdasimages%2Fchannel%2Flandscape%2F360x270%2FiVNajBJ9.png&w=256&q=75" alt="Zee Bangla Cinema">
+            <span>Zee Bangla Cinema </span>
+        </a>
+	  
+        <a href="go:atnb" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThFvDYe3XVqLCsdNRaTzvfI8VO6FKxhIQfKw&s" alt="ATN Bangla">
+            <span>ATN Bangla</span>
+        </a>
+	  
+        <a href="go:asian" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmsLxhngsCNz4zU0XTgTvBVrHpBwkXseJPQg&s" alt="Asian">
+            <span>Asian</span>
+        </a>
+	  
+        <a href="go:mytv" class="link-button">
+            <img src="https://i.ibb.co/1fkFvQL/20240817-133908.png" alt="Mytv">
+            <span>Mytv</span>
+        </a>
+	  
+        <a href="go:banglatv" class="link-button">
+            <img src="https://i.ibb.co/P98mF2r/20240815-181318.png" alt="Bangla Tv">
+            <span>Bangla Tv</span>
+        </a>
+	  
+        <a href="go:banglavi" class="link-button">
+            <img src="https://i.ibb.co/N6YsQx2/20240815-181504.png" alt="Bangla Vision">
+            <span>Bangla Vision</span>
+        </a>
+	  
+        <a href="go:dbc" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK0pK8NRpog9vV5dJ1JhdX3gyMz_T-6cLIcg&s" alt="DBC">
+            <span>DBC</span>
+        </a>
+	  
+        <a href="go:gtv" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/20/GTVBangladeshLogo.png" alt="G TV">
+            <span>G Tv</span>
+        </a>
+	  
+        <a href="go:ananda" class="link-button">
+            <img src="https://seeklogo.com/images/A/anondo-tv-logo-B99389891D-seeklogo.com.png" alt="Ananda Tv">
+            <span>Ananda Tv</span>
+        </a>
+	  
+        <a href="go:s" class="link-button">
+            <img src="https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png" alt="Channel S">
+            <span>Channel S</span>
+        </a>
+	  
+        <a href="go:somoy" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqvTgUCrv5TMH7PemqAcK_zV8Ph-OHSOTkIw&s" alt="Somoy Tv">
+            <span>Somoy Tv</span>
+        </a>
+		
+		<a href="go:sonymax" class="link-button">
+            <img src="https://yt3.googleusercontent.com/eX5W_cWGEEVbrlmwESKzCHhM7U50FZF0Nsvyi3zKAbmODq1woLh4UQFI0eSU40psHox3j5rO-A=s900-c-k-c0x00ffffff-no-rj" alt="Sony Max">
+            <span>Sony Max</span>
+        </a>
+		
+		
+		<a href="go:sonymax2" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/hi/f/f4/Sony_Max_2_new_logo.png" alt="Sony Max 2">
+            <span>Sony Max 2</span>
+        </a>
+		
+		
+		<a href="go:b4u" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8gXr9tRZCyduBIu9A9iE4ol4AmZ__nXQKWA&s" alt="B4U MOVIE">
+            <span>B4U Movie</span>
+        </a>
+		
+		
+		<a href="go:zeetv" class="link-button">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw4NEBAPEA8QEA8QEBUQDxAQEBAPEBYQFhEWFhUSFhcYHSggGB0lHhcWITEiJykrLjAuFx8zODMtNygtLisBCgoKDg0OGxAQGi0jICUwLSsrMDAtLSstKy0tLS8tLi0tLS8tLS0tKy0vLy0rLi0tKy0tLS0tLi0tLS0rLS0tK//AABEIALYBFQMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgYBAwUHBP/EAEkQAAIBAgEFCgYPCAMBAAAAAAECAAMRBAUGEiExEyJBUVRhcYGR0QdTcpOh0hQVFjIzNEJSc4KSsbPBwhcjYoOisuHiY6PwQ//EABoBAQACAwEAAAAAAAAAAAAAAAABBQIEBgP/xAA6EQACAQIBBwsDBAIDAQEBAAAAAQIDEQQFEiExUnGhExQVQVFhgZGx0eEywfAiMzRTYqJCsvEjchb/2gAMAwEAAhEDEQA/APcYAgCAIAgCARdwoJJAA2kmwkSkoq7JSbdkcnGZxUKepb1D/DqXtP5XlbWyrRhoj+p92rz9rm9SyfVnploONis5sQ3vAlMdGm3adXolfUytWl9KS4v88Dfp5NpL6rvh+eZzK+VMS+2vU+qxQdi2mpLF1565vzt6WNyGGox1QXlf1PiqVXbazHpYmebnJ62/M2IxitSRoOqQmehNcVWX3tWovk1HX7jPRVZrVJ+bMXSpy1xT8EfVQzhxtPZXZhxOFf0kX9M2IY2vHVLz0/J4zyfhp64eWg62Dz2qDVWoqw4Wpkqfsm9+0Tcp5Vkvrjfd7fJpVcixf7crb/f4LDk7ODC4mwSoFc/IfeNfiF9R6ryxo4yjV0Renseh/m4qq+Ar0dMo6O1aV8eJ1JtGmIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgHHyhlxKd1p2duP5A7+rtlTisqwp/pp/qfD58PM3qGBlPTPQuJXMZiqlY3di3ENijoGyUVbEVKzvN39PItqVKFNWirHysJ5HujUwkmSNbCSZo1sJJkjWwkmaNZkmRAiSZEDJMjWwkmSOxknObE4Ww0t1pj5FQkkD+Fto9I5pu0MdVpaNa7H7mhicm0a+m2a+1fdF5yNl3D4wfu2s4F2ptYOOfnHOJd0MVTrL9Ovs6znMVgquHf6lo7VqOnNg1BAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAIVaqoCzEADaTMKlSNOLlN2SMoxcnZFbynlR611W60+LhPT3TmcZlGdf8ATHRHi9/sW2Hwsael6X6HLIlcbiNbCSZo1sJJkjWwkmaNTCDNGthJMkamEkzRrMkzRAySSBmRkiBkmRrMkyRhHZGDKSrKbqykgg8YImSbTug4qSs1dF5zZztFUrRxJC1DqSrqCueJvmt6DzbDdYTH59oVNfb2/JzuPyU6d6lHSutda3dq4ot0syjEAQBAEAQBAEAQBAEAQBAEAQBAEAQCFWoqAsxsBrJmFSpGnFzk7JGUYuTsitZRxjVjxIPer+Z55yeMxksTLsitS+77/T1t6FFU13nwmaZsIgwkmRraSZo1tBkjU0kzRraSZo1NJMka2kmaNbSTNGsyTIgZJkQMkk1mZGSIGSZEGEkyRdczs5ySuFxDXJ3tGqx28VNjx8R6uK9vgsZqp1Huf2Zz+VMm2TrUlvX3X38y7S2OeEAQBAEAQBAEAQBAEAQBAEAQBAEArWVsfuraKn92p1c54+6ctlHG8vPNi/0ri+32LfDUOTjd62fDeVpskTBKNbSTIgZJkjW0GSNTSTNGtpJmjW0kzRqaSZI1tJM0azJMiDSTJEDJMjW0kyRAzIkgZJkjW0kyPR8ysv8AspNxqtevTGona9PZpdI2HqPDL3A4nlI5kta4o5TKuA5CXKQX6Xwft2eRZ5vlQIAgCAIAgCAIAgCAIAgCAIAgHJy/jdzXc1O+ca+ZP87O2VOVcVycOTjrl6fOrzN3BUc+We9S9Sugzmy2sZvIIsCZIIEwSQMkyRAwZI1tJM0a2kmaNTSTJGtpJmjU0kzRAyTI1mSZIgZJkiBkkkDJMjWZkZIgZJkjZg8W+HqJVpmzo2kOLnB5iLg9MzpzcJKUdaMKtKNWDhPUz1/JmOTFUadZPeut7cIOwqecG46p0tKoqkFJdZw2IoSoVHTlrX5fxPqnoeIgCAIAgCAIAgCAIAgCAIBh2CgkmwAuTzCQ2krslJt2RScZijWqM54TqHEvAJxuIrOtUdR9fp1HQ0qSpwUUawZ4GVjN4FjF4FjBMEkSZJJAwZI1tJM0a2kmSNbSTJGtpJmjU0kzRAwZEDMjJGsySUQMkyIGSZEDJMkazJMkQMyJRcPB1lTQqPhWO9qXqUvLA3yjpAv9UyzydWtJ0316UUeXMNnQVZdWh7urj6noEuDmBAEAQBAEAQBAEAQBAEAQDk5y4nc6OiNtQ6P1drd3XK3KtbMoZq1y0eHX7eJvYCnn1b9hVAZzBdWJAwRYzeCLC8AwTBJgmCbECZJKNZMGSINJM0a2kmSNbSTJGtpJmiBkmRrMkyRAySUQMkyIGSZEDJJRAyTJEDMjInhMU1ColVffU3DjgvY7OvZ1zOE3CSkuoxqU1Vg4S1NWPaMPWWoi1FN1dQ6njUi4M6eMlJJo4CcHCTjLWtBskmIgCAIAgCAIAgCAIAgCAVHOrEaVYJwU0/qbWfRoznMrVM6so9i9fxF5k6nak5dr9PxnIDSqN+xINBjYzpSBYaUEWF5JNj7skZO9lFxp6GiAfe6V7355u4LCc5bV7WNbE4jkEna9zpHNf/m/6/8AaWHQy2+HyanSf+HH4MHNUeP/AOv/AGjoZbfD5J6U/wAOPwROag8efN/7R0Mtvh8k9K/4cfgic0R48+b/ANpPQ62+HyT0t/hx+Ct5Rw+41Xp30tA2va19XFKmvS5Ko4XvYtqFTlKana1zfkTJBxjOoqbnoAG+hp3uTzjinthMI8Q2lK1u6/3R54vF83Sebe/fb7M6vuLPKR5k+vN7oeX9n+vyaXTK2OPwYOZJ5SPM/wC8noiW3/r8jppf18fgicx25SPMn15PREtvh8k9Nr+vj8GjGZmGlTqVPZIOgjPbcbX0VJtfT1bJjPJbhFyz9WnV8nrSywpzUMzW0tfb4FSMrC7O7m5m4Mcjuapp6D6Fgga+9Bvt55v4TCKvFtu1nYrcdlB4WSio3ur6zq+4FeUt5oetNvotbXA0unZf18fgwfB+nKW80PWk9GLa4E9PS/r4/Bg+D1OVN5oetHRi2uBPT8v6+PwWnI+COGo06Bc1NzGiGI0SVvcC3MNXVLCjT5OChe9imxVZVqrqWtfq/PM34utudOpUtfQRnte17KTaZTlmxbPKlDPmo9rSKT+0F+Sr54+pKrpOWxx+Dov/AOfj/Z/r8j9oL8lXzx9SOk5bHH4HQEf7P9fkftBfkq+ePqR0nLY4/A6Aj/Z/r8j9oL8lXzx9SOk5bHH4HQEf7P8AX5O3mvnIcoNVU0RT3MKbhy99In+EW2TawuLddtNWt33K7KGTlhIxale9+q2rxZzsqZ6VcNWqUWwqk02tfdiLrtVvecIIPXPGrlCVObhmau/4NvD5GhWpRqKprXZ59faWHIOVFxtBawGiSSrpfS0WB2X6LHrE3cPWVaCkVWNwrw1V0279j7Toz2NUQCuZzZ0jA1EpLSFVmTTa76GiL2XgN72bsHHNHFYzkZKKV3vsW2T8l86g5uWar2Wi9+3rRjIGcWIxwqFMMiimVFzWNiTfUN5wWHaIw+KnWvaNrd/wMbk+lhc1SqN37vk4eV62niKx/wCQr1KdEfdOfxcs+vN9/po+xZYaGbRiu710nyhprHrYkDBFiWlIIsLwLC8Cx0ci5TXDM5ZS2kANVuAnjm/gcXHDuTavexq4vDOskk7WOr7qqfin7Vlj0xT2XwNLoue0jHurp+KftWOmKey+A6KntI6eSso+ylLimyIDYFiNZ4bW4pvYXE84jnKLS7+s1MTh+Rea5XZ9WIrrSVnchVUXJM95zjCLlJ2SPCEJTkoxWlnm+UsSK1WpUAsHa4B224Lzk69Tlakp2tc62hT5OnGD6juZi/CVvIX7zLLJH1z3L7ldlj6Ib2WjKGLXD0nqsCVQXIW19oGq/TLmtVVKDm+opqFJ1aigus4Hu0w/iq3ZT9aV3S1PZlw9yz6Gq7S4+xg57YfxNbsp+tHS1PZfD3HQtXaXH2Pnx+eNCrSq0xSrAvTZASKdgWUgE77nmNTKdOcHFRelW6vc9aOSKsKkZOS0NPr9ikmU50JevB38DW+m/Qsu8lfRLf8AZHOZc/dju+7O3l3Ky4KkKrIXBcJZSAdYOvX0TdxFdUYZzVyuweFeJqZidtFyvHP+lyep9pJp9Jw2XwLToGptriYPhBo8nqfaSOk47L4E9A1NtcTrZuZyU8oNUVabUzTCnfEG4JbZbo9M2cPio1m0laxo47J0sKotyTvc7GJoioj0ybB0KEjaLi15sSWcmjRpzzJqXY7lT/Z/R5RV+yndK7oyG0+BedP1NhcTmZxZp0sHh2rLVqOVZRosFA3zAcHTPDE4KNGm5pt6jbwOVp4isqbilr7epHCyDgFxeIp0GYqH0rstrjRRm4eialCmqlRQfX7FljK7oUJVEr2txaRcPcBR5RV+yndLLoyG0+BQ9P1NhcTrZvZuJgGqMtR33QKDpBRbRJ4umbOHwsaDbTvc0sdlGWKUVKKViv8AhHydY0sSo2/uqnTrKH+4dk08pUtKqLc/sWeQsRdSovevv9uJo8HWUNCs+HJ1VRpp9Io1gdK/2TDJ1W03B9fr/wCeh65cw+dTVVf8dD3P2fqehS5OWMMwAJJsALknZaCUm3ZHjmWcecVXq1zsdiVvwINSjsA9M5mtV5Sbn+WO9wtDkKMaa6vXr4npuamTvYuFpoRZ2G6VOPTbXY9AsOqXuEpcnSSevW/zgcflLEcviJSWpaFuXvr8Sk1qmkzHjYntN5ytR3k33s6GMbRSMAzAmxINBFjOlIIsZ0oFheBYxeBYwTJJsdDImS2xT67ikvv2/SOc+jsm5gsI8RP/ABWv23+nkauLxKoR73q9y8oq01AFlRRq4AFAnUJRhGy0JHONynK70tlGziyycS2ghtRQ73+I/OP5D/w5vHYx15ZsfpXHv9vy3R4HB8jHOl9T4d3ucUmaJYIsuYnwlbyF+8y3yR9c9y+5UZY+iG9lgzgovUw1VEUszKLKNp3wlpi4SnRlGKuyrwU4wrxlJ2RQzkHGcnf0d8oOZ19h8DpefYfbRE5BxvJ6no745nX2HwJ59httGqrkPGKpZqDhVBZibWAAuTth4SsldxZnHG4eTSU1dnMM8DbL14Ovga3036Fl3kr6Jb/sjnMufux3fdn3554GticMEooXfdVawKjUA1zrI45sY6nKpStBXdzWyVXp0a+dUdlZlGOauUOTN9uj60qeZ19jivc6LpPCbfB+xE5qZR5M3nKPrSeZ19nivcy6Uwn9nB+xYcxcj4zC4io1aiadNqJGkWptvw6kCysTs0uybuBoVac25Kyt3FXlfF4evRSpyu0+x6rPtW4vEtDnRAK9n78RqeXT/EE0sofsPevUtcjfy47n6FLzK+P4f+Z+C8q8F+/Hx9GdBlb+HPw/7I9VnQnFCAfDlvADFYerRO113pPA41qe0CeVelylNwNjCV3QrRqdmvd18DyTCYh8PVSoAQ9Jw2idWtTrU+kGc5CThJSWtHc1Kca1Nwepr16/ueyYautVEqIbq6h1PMRcTpoyUkpLUzgakHTk4S1rQcLPnKG4YVkB39c7kPJIu57NX1hNTH1cylbrej3LLI+H5XEKT1R0+PVx0+BR81cneysVTQi6Kd1qeSpGrrOiOuVWFpcpVS6tb8Do8o4jkMPKS1vQt7+Ls9anRHDnld5xbO0JBpBFjIaDGxLSkCw0oIsLwLC8Cx9WTMC+JqCmuobXbgVePuE98Ph5V55kfF9i/NR44ivGjDOl4d5f8HhUoItNBZV7SeEnnnV0qUaUFCOpHM1asqknKWsqmdGW90JoUjvAf3jD5RHyRzD0/fSZRxue+Sg9HX392713a7rJ2CzFys1p6u7v3/m6tEyqLcgTBkWfMP4Sv5C/eZcZI+ue5fcp8sfRDey4VKioCzEKo2liAB1mXbaSuyhjFydkrnz+2OH8fS84nfPPlqe0vNHrzetsPyY9ssP4+j5xO+Ty1PaXmhzetsPyZ8mVsoYc4euBWpEmjUAAqISToHUNc8q1Wm6crSWp9fce+Gw9VVoNxetdT7TywzmkdkXvwdfA1vpv0LLrJX0S3/ZHN5c/dhu+7LPisVSorpVaiU1vbSdggvxXMspzjBXk7FPTpTqO0E2+7SfJ7e4LleH89T755c5o7a80e/McT/XLyY9vsDyvD+ep98c5o7a80OY4n+uXkzbhcqYau2hSr0qjAaRWnUR20RqJsDs1jtmcasJu0ZJ+JhUw1anHOnBpd6aPsnoeAgFez9+I1PLp/iCaWUP2HvXqWuRv5cdz9Cl5lfH8P/M/BeVeC/fj4+jOgyt/Dn4f9keqzoTihAEA8wz4yduGKZwLJXG6Di09jjtsfrShx1LMq3Wp6ff38TsckYjlcOovXHR4dXt4Fk8HmUN0oNQJ31Bt79G9yOw6Q7Ju5Oq50HB9Xoypy5h8ysqi1S9V8W4lbz6yhu+KKA3SgNzHFp7XPbYfVmlj6ufVstS0e/53FtkfD8lh8565afDq9/Esfg8ydudBq5G+rNZfo0JA7TpeibuTqWbBzfX6IqcuYjPqqktUfV/FuJbJYlIeWYtdGpUX5tRl7GInHVVacl3v1OzpPOhF9qXoaw0wMrEg0gixkNBFjOlAsNKBY24Wg9Z1poLsx1cXOTxCZ06cqklCC0swqTjTi5y1I9ByVk5MLTCLrO124Wbj6OITqsNh40IZq8X2nL4nESrzzn4LsONnTlzcwcPSO/Oqow+SPmjnPo+7Qyjjc1clB6et9ndv9Dfydgs7/wCs1o6l29+4p15RF/YiTBJgmSSWfML4Sv5C/eZb5I+ue5fcpss/RDezvZ0/E6/kj+4Syx38eW4rcnfyYfnUeZmcxY64gZJkRMkkgZJKL54Ofga3036Fl1kv6Jb/ALI5vLn7sN33Zu8IfxQfTL9zT1yj+z4o88ifyfB/Y81JlGdakQJkmVi2+DOnfEVn+bR0ftOD+iWOTVeo33ev/hR5elajGPa7+S+T0eXJyogFez9+I1PLp/iCaWUP2HvXqWuRv5cdz9Cl5lfH8P8AzPwXlXgv34+PozoMrfw5+H/ZHqs6E4oQBAK7nzk7d8Kzgb+gd1Hkgb8dmv6omlj6WfSuta0+5a5HxHJYhReqWjx6uOjxKFkDKrYKtuoGkCjIy8dxdf6gvVeVGHrOjPOX5+M6bG4VYmlmPtT9+Fz5cLQfE1Upg3qVXA0jr1sdbH0kzzhF1JKPW/z5PapUjRpub1RXp1fY9kw1BaSJTQWVFCKOYCwnTRioxUVqRwNScqknOWt6TbMjA82zjpbni6w4C+mPrAMfSTOWxsM2vJd9/PSdbgZ5+Hg+63loOdeaptGbyBYzeCLGbwLDSgWLbmKgtWaw0rqt+G1ibS7yRFWk+so8sN3iurSWqXJSnytk3DkkmhRJJuSaaEknadk8Xh6L05i8keyxFZaFN+bMe1mG5PR80ndHNqOwvJE85rbb82PavDcno+aTujm1HYXkhzmttvzZ57l9FTE1lUBVD2AUAADRGwCc3i4qNeSSsr/Y6jBNyoQbd3Y7OYPwlfyF+8zeyT9c9y+5oZZ+iG9lxrUlqKVdVZTtVgGU9IMu5RUlaSuihjKUXeLsz5PafCclw/mafdPDmtDYj5I9ud4j+yXmx7TYPkuH8zT7pPNaGxHyRPPMR/ZLzZ8mVsk4RcPXZcNQDCi5BFGmCCENiDbVPOthqKpyagtT6ke2Gxdd1oJzla6632nlxM5w7Evng4+BrfTfoWXWS/olv+yOby5+7Dd92WqtRSoLOquL3swDC/HYyzcU9aKWM5Rd4uxp9rsP4il5tO6Y8lDsXkenOKu2/Nj2tw/iKPm07o5OHYvIc4rbb82Tw+Gp0y2hTRLgX0FVb7dtpMYpakYzqTmlnNvezfMjzEAr2fvxGp5dP8QTSyh+w969S1yN/LjufoUvMr4/h/5n4LyrwX78fH0Z0GVv4c/D/sj1WdCcUIAgGGUEEEXB1EHZaCU7aUeO5awBwuIq0eBG3nOh1qewjrvOZrU+TqOHZ6HeYSvy9GNTt17+ssXg6ydp1amJI1UhoJ9Iw3x6l/vm7k6lebm+rQt//nqVWXcRm01RXXpe5e79D0GXJy4gFKz9w2jUpVhsdSjdKm47Qx+zKPKtO04z7dHkdDkapeEqfY7+f5xKsDKkuCV4FjN5BAvAM3gH04PKNegCKVQoGNza2s9YnrTr1aWiErHjVw9KrpnG59Ht/jPHv2L3T157iNt8PY8uYYfYXEx7f4zx79i90c9xG2+HsOYYfYXEe6DGePfsXujnuI23w9ieYYfYXEx7oMZyh+xe6Tz3Ebb4ew5hhthcTn4iu1Ri7kszG7E7SZ4Sk5vOlpZtQhGEVGKskbMFlGthixpOULABrBTcDZtBmdKtUpXcHa+77mFXD06ySqK9t59Rzlx3KG+xS9We3PcRt8F7Hj0bhdji/cwc5sfyhvsUvVjnuI2+C9iejcLscX7kTnPj+UN9il6snnuI2+C9iejcLscX7mutnHjnVkauSrKVYaFLWpFiPew8XXas5cF7GUcnYaLUlDSu9+5yDNc3j6cHlXEYcFaVVqYJuQttZta+sT2p1qlNWg7HjVwtGq71Ipm45yY/lNT+nunpzuvtvgefR2F/rRE5y4/lVT+nujnVfbfAno7C/wBaInObH8qqf090nnVbbfAno3C/1riem5tir7FotWZnqum6Ozbd9vgD0AgdUvMPncknLWcjjuT5xJU1aKdl4e+s6c9jUEA04vC066mnVRXQ2JVhcXBuJjOEZq0ldHpSqzpSzoOzPlwuRMJRcVKdCmjrfRZVsRcEH0Ezzhh6UHnRikz2qY3EVIuM5tpnQnsaogCAIB8WMyRhsQ2nVo06jW0dJlubAkgekzynQpzd5RTNili61KObCTSN2DwdKguhSRaaXJ0VFhc7TMoQjBWirI86tadWWdN3ZvmZ5iAcnOjA+yMNUUC7p+8Tjuu0DpFx1zUx1HlaLS1rSvD8sbuT6/JV03qeh+PyeaAzmTrrGbwRYzeAZvIIF4AvAF4AvBJi8kGLwSYJkgiTBJEmSSYJgkiTJJIEySSJMGREzIkiYJIGSZH2ZDyecXiaVG29ZrvzUxrfo1AjpIntQp8pUUfyxr4uvyFCVTs1b+o9nAtOkOBMwBAEAQBAEAQBAEAQBAEAQDzHObJvsXEMoFqb/vKfFYnWvUdXRaczjKHJVWlqelfnd7HX5PxHL0U3rWh+/j7nKvNU3TN4Bm8ggXgC8AXgC8AxeSSYvAMEwSYJkkkSYBgmSSRJkkkSYJIkySSBkmREmSSRMkk9B8HGSdCm2Kcb6rvKV9opA6z1kdijjlvk+jaPKPr1bjmMuYrOmqMdS0vf8L1LpLIoBAEAQBAEAQBAEAQBAEAQBAOTnLkn2ZRKi26pvqR/i4VPMdnYeCauMw/LU7LWtX53m9gMXzerd/S9D9/A8wIIJBBBBsQdRBG0Gc1Y7BWauheBYXgixm8gWF4FheBYXgWMXkixi8E2F4BEmSSYJgkiTJBgmCSJMkkiTJJIkyTIgTBJ0c3ckNjq60hcIN9VYfJpjb1nYP8ABmxh6Lqzzerr3GrjcXHDUnN69SXa/ZdZ7DRpKiqigKqgKqjYFAsAJ0KSSsjhZScm5S1snJMRAEAQBAEAQBAEAQBAEAQBAEApme2QCb4ukvBeuo4h/wDQfn28cqMoYS//ANYePv7l/knHWtQqP/8AL+3t5dhSbyoOgsZvAM3gC8ggXgC8kkxeALwLGLwTYxeSCJMEmCZJJEmCTBMkESZJkRJgknhsO9Z1p01LO50VUcJ/IcN+aZRi5NRWsxqVI04uc3ZI9bzbyImAoimLNUbfVX+c3EOYbB/kzocPQVGFuvrOIx+Mliquc9S1LsXu+s609zSEAQBAEAQBAEAQBAEAQBAEAQBAEAoOdma5pFsRh1vS21KY2pxso+bzcHRspcZgsz9dNaOtdm7u9N2rpsm5TVS1Kq9PU+3uff679dSvKwu7C8EGbwLC8CwvAMXgC8EmLwDF5JJgmAYJkkkSYJMEySSJMEksPQes606al3c2VV2k/wDuGZRi5OyWkxnONOLnN2SPUs1M2kwC6b2fEOLO42KPmJzcZ4ewS9wuFVFXes47KOUZYqWbHRBal297/NBYJtlYIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAU/OTM8VL1cKArnW1LUEY8a/NPNs6JWYrAKX6qevs/NXoXuByu4WhX0rt61v7Vx3lErU2psUdSrqbMrAgg9Ep5RcXZ6zo4yjOKlF3TI3kWMheALxYGLxYC8AxeCTF5IMXgkxeCbGCZIIkwSffkbI2Ixz6NJdQNnqNqpr0nj5hrnvRoTqu0V7GtisZSw0b1HuXW/ztPTs3s3qOAXe7+qws9VhvjzD5q83beXeHw0aK0a+05DG4+pipfq0LqX5rfedibBoiAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIBz8r5Gw+MW1VLkCyuu9qL0H8jqnjWw8KqtJe5tYbGVcO7034dT/PMo2V8y8TRu1H9/T4hvaoHOuxurslTWyfUhpj+pcfz8sdFhssUamip+l8PPq8fMrNRWUlWBVhtVgVYdIOsTQaadmW8WpK6d0RvBNheBYXgWMXgWF5JNjF4BgmCT6MBk+vijo0aT1DsOiN6OljqHWZ6U6c6miCueVavSoq9SSX52ay55FzBAs+LfS4dxpkhfrPtPQLdJllRyctdR+C9ygxWXW/00Fbvf2XvfcXXD0EpKEpqqIosqqAqgdAlnGKirJHPznKcnKTuzZJMRAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEA+XHZPoYgWrUkqDg0lBI6DtHVPOdKFRWkrntSxFWi705NFexmYeEfXSerRPAL7on9Wv0zTnk6k/pbXH19y0pZcrx+tKXB8NHA42JzAxC/B16Tj+MPT+7SmtLJs1qknw9zfp5dov6oNbrP2OJi8g16Pvmp/VZj96zWlhZx12/PAsKeOpVNSfD3PjXAuTa69p7pgqMme7rxSudTBZp4qv71qA8p6g+5J7RwVSWq3H2NOrlWhT+pS8l7nZwvg8b/64kAcK06ZJ+0x/KbMcmv8A5S8l+ehoVMvx/wCEPN/b5O7gMzMBRsTTNZhw1m0h9kWU9k2oYGjHWr7/AMsV1bLGKqanm7tHHXxO/TpqgCqoVRqCqAABzATbSS0IrJScndu7JSSBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQD//2Q==" alt="Zee Tv">
+            <span>Zee Tv</span>
+        </a>
+		
+		
+		<a href="go:ntv" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV4ZSS6DQT8QEpLNgTBaodTNuDsI8FqcTWsA&s" alt="N Tv">
+            <span>N Tv</span>
+        </a>
+		
+		
+		<a href="go:satv" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKm8oVxzBpoVMTi_HUXhMisJ5Wr7ros9nB2w&s" alt="SATV">
+            <span>SATV</span>
+        </a>
+		
+		
+		<a href="go:tsports2" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdOH-HsIdfvzwiwSoKZYEkAQxnv2kFpRkFSw&s" alt="Tsports">
+            <span>Tsports</span>
+        </a>
+		
+		
+		<a href="go:c9" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Channel9_bd.svg/1280px-Channel9_bd.svg.png" alt="Channel 9">
+            <span>Channel 9</span>
+        </a>
+		
+		
+		<a href="go:inde" class="link-button">
+            <img src="https://e7.pngegg.com/pngimages/820/350/png-clipart-bangladesh-independent-television-television-channel-independent-international-tv-independent-television-authority-television-text-thumbnail.png" alt="Independent">
+            <span>Independent</span>
+        </a>
+		
+		
+		<a href="go:desh" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Desh_tv_logo.jpg" alt="DESH">
+            <span>DESH</span>
+        </a>
+		
+		
+		
+		<a href="go:rtv" class="link-button">
+            <img src="https://image.pixahunt.com/graphics/long/Pixahunt-9d472c60dafbf3d27d82306e4b4b682f.webp" alt="R Tv">
+            <span>R Tv</span>
+        </a>
+		
+		
+		
+		<a href="go:mohona" class="link-button">
+            <img src="https://static.wikia.nocookie.net/etv-gspn-bangla/images/7/74/Mohona_TV_HD_logo_2021.png/revision/latest/scale-to-width-down/200?cb=20231121085436" alt="Mohona Tv">
+            <span>Mohona Tv</span>
+        </a>
+		
+		
+		
+		<a href="go:71" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Ekattor_TV_logo.svg/1200px-Ekattor_TV_logo.svg.png" alt="71 Tv">
+            <span>71 Tv</span>
+        </a>
+		
+		
+		
+		<a href="go:nagorik" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Nagorik_TV_Logo.png" alt="Nagorik">
+            <span>Nagorik</span>
+        </a>
+		
+		
+		
+		<a href="go:peacetv" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT36Lyk5WRK69YyUM66iN28zM-TSa3bo7y-yQ&s" alt="Peacetv">
+            <span>Peacetv</span>
+        </a>
+		
+		
+		
+		<a href="go:islam" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Islamic_TV_Logo.gif" alt="Islam Bangla">
+            <span>Islam Bangla</span>
+        </a>
+		
+		
+		
+		<a href="go:madani" class="link-button">
+            <img src="https://madanichannelbangla.tv/img/img/logo/b-logo.png" alt="Madani">
+            <span>Madani</span>
+        </a>
+		
+		
+		
+		<a href="go:sonya" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Sony_Aath_new.png" alt="Sony আট">
+            <span>Sony আট</span>
+        </a>
+		
+		
+		
+		<a href="go:sangeetb" class="link-button">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/7/75/Sangeet_Bangla_logo_2021.png/revision/latest/scale-to-width-down/331?cb=20240322135248" alt="Sangeet Bangla">
+            <span>Sangeet Bangla</span>
+        </a>
+		
+		
+		
+		<a href="go:akash8" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/bn/thumb/8/80/%E0%A6%86%E0%A6%95%E0%A6%BE%E0%A6%B6_%E0%A7%AE_%E0%A6%9F%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AD%E0%A6%BF%E0%A6%B6%E0%A6%A8_%E0%A6%9A%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%87%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.jpeg/220px-%E0%A6%86%E0%A6%95%E0%A6%BE%E0%A6%B6_%E0%A7%AE_%E0%A6%9F%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AD%E0%A6%BF%E0%A6%B6%E0%A6%A8_%E0%A6%9A%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%87%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.jpeg" alt="আকাশ৮">
+            <span>আকাশ৮</span>
+        </a>
+		
+		
+		
+		<a href="go:enterr10" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Enterr10_Bangla.jpeg" alt="Enterr10">
+            <span>Enterr10</span>
+        </a>
+		
+		
+		
+		<a href="go:zee24" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/bn/b/b4/%E0%A6%9C%E0%A6%BF_%E0%A7%A8%E0%A7%AA_%E0%A6%98%E0%A6%A3%E0%A7%8D%E0%A6%9F%E0%A6%BE_%E0%A6%8F%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.png" alt="Zee২৪ ঘন্টা">
+            <span>Zee২৪ ঘন্টা</span>
+        </a>
+		
+		
+		
+		<a href="go:abp" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcQk_OLzAwZkr3IbPwqn470l-QC-y3wfZ1w&s" alt="ABP Live">
+            <span>ABP Live</span>
+        </a>
+		
+		
+		
+		<a href="go:btv" class="link-button">
+            <img src="https://seeklogo.com/images/B/btv-bangladesh-television-logo-FFB6C4E6F0-seeklogo.com.png" alt="BTV">
+            <span>BTV</span>
+        </a>
+		
+		
+			
+		
+		<a href="go:boishakhi" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Boishakhi_TV_logo.svg/1160px-Boishakhi_TV_logo.svg.png" alt="Boishakhi Tv">
+            <span>Boishakhi Tv</span>
+        </a>
+			
+		
+		<a href="go:nexus" class="link-button">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSChMyVIxM56mmN6195LLYQHQXsuUJGkkZ9hA&s" alt="Nexus">
+            <span>Nexus</span>
+        </a>
+			
+		
+		<a href="go:etv" class="link-button">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d9/Ekushey_Television_Logo.svg" alt="ETV">
+            <span>ETV</span>
+        </a>
+			
+		
+		<a href="go:amarb" class="link-button">
+            <img src="https://yt3.googleusercontent.com/ytc/AIdro_mCYywk_JZetFN5JIScW5oquz_R8X5NiQGulfv9wUooDQ=s900-c-k-c0x00ffffff-no-rj" alt="আমার বাংলা">
+            <span>আমার বাংলা</span>
+        </a>
+		
+		
+   
+    </div>
+	
+	        
+						        <br> <hr size="0.7" color="#f2f2f2">
+						      <h5   <p style="text-align: center;">© Powered by Md Rikton Hasan Ruku</span></span></p>
+	</div>
+
+	
+	
+	
+	
+	<style>
+img{border-radius: 500px ; border-color: white; padding: 0px; margin:0px; height:850px; width: 805px;}
+		body{background-color: #222 ;}
+        </style>
+		
+		
+		<style>
+  body {
+  margin-left:0px;
+  margin-right:0px;
+    margin-top: 0px;
+    background: white;
+    text-align: center; 
+    color: #555;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+</style>
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+    <!-- JavaScript for banner slider functionality -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Automatic slider transition
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000); // Change slide every 5 seconds
+
+        // Initial display
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
